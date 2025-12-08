@@ -1,4 +1,3 @@
-using ProductOrderAPI.Domain.Common;
 using ProductOrderAPI.Domain.ValueObjects;
 
 namespace ProductOrderAPI.Domain.Entities;

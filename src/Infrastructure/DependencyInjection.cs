@@ -1,23 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using ProductOrderAPI.Application.Common.Interfaces;
 using ProductOrderAPI.Infrastructure.Persistence;
+using ProductOrderAPI.Application.Common.Interfaces;
 
-namespace ProductOrderAPI.Infrastructure;
+namespace Microsoft.Extensions.DependencyInjection;
 
 public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        var connectionString = configuration.GetConnectionString("Default");
-
         services.AddDbContext<ApplicationDbContext>(options =>
-        {
-            options.UseNpgsql(connectionString);
-        });
+            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
-        services.AddScoped<IApplicationDbContext>(sp => sp.GetRequiredService<ApplicationDbContext>());
+        services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
 
         return services;
     }

@@ -25,8 +25,7 @@ public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, P
 
         if (product == null)
         {
-            // TODO: Throw a custom NotFoundException
-            return null; 
+            throw new NotFoundException(nameof(Product), request.Id);
         }
 
         return _mapper.Map<ProductDto>(product);
