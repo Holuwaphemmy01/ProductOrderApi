@@ -1,0 +1,55 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+
+# Packages
+*.nupkg
+*.snupkg
+*.dll
+*.exe
+*.pdb
+
+# Rider
+.idea/
+*.iml
+
+# Resharper
+*.DotSettings
+
+# Test Results
+TestResults/
+
+# Database files
+*.mdf
+*.ldf
+*.db
+
+# User secrets
+appsettings.Development.json
+appsettings.Production.json
+appsettings.json
+
+# Logs
+logs/
+*.log
+
+# Docker
+docker-compose.override.yml
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# VS Code
+.vscode/
