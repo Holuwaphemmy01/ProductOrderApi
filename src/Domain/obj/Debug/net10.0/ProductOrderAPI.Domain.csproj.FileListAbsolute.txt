@@ -1,0 +1,12 @@
+C:\Users\holuw\Desktop\productOrderApi\src\Domain\bin\Debug\net10.0\ProductOrderAPI.Domain.deps.json
+C:\Users\holuw\Desktop\productOrderApi\src\Domain\bin\Debug\net10.0\ProductOrderAPI.Domain.dll
+C:\Users\holuw\Desktop\productOrderApi\src\Domain\bin\Debug\net10.0\ProductOrderAPI.Domain.pdb
+C:\Users\holuw\Desktop\productOrderApi\src\Domain\obj\Debug\net10.0\ProductOrderAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\holuw\Desktop\productOrderApi\src\Domain\obj\Debug\net10.0\ProductOrderAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\holuw\Desktop\productOrderApi\src\Domain\obj\Debug\net10.0\ProductOrderAPI.Domain.AssemblyInfo.cs
+C:\Users\holuw\Desktop\productOrderApi\src\Domain\obj\Debug\net10.0\ProductOrderAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\holuw\Desktop\productOrderApi\src\Domain\obj\Debug\net10.0\ProductOrderAPI.Domain.sourcelink.json
+C:\Users\holuw\Desktop\productOrderApi\src\Domain\obj\Debug\net10.0\ProductOrderAPI.Domain.dll
+C:\Users\holuw\Desktop\productOrderApi\src\Domain\obj\Debug\net10.0\refint\ProductOrderAPI.Domain.dll
+C:\Users\holuw\Desktop\productOrderApi\src\Domain\obj\Debug\net10.0\ProductOrderAPI.Domain.pdb
+C:\Users\holuw\Desktop\productOrderApi\src\Domain\obj\Debug\net10.0\ref\ProductOrderAPI.Domain.dll
