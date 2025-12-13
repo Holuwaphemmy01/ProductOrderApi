@@ -1,5 +1,6 @@
 using ProductOrderAPI.Application;
 using ProductOrderAPI.Infrastructure;
+using ProductOrderAPI.API.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseExceptionHandlingMiddleware();
 
 app.MapControllers();
 
