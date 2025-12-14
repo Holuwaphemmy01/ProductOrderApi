@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using ProductOrderAPI.Application.Products.Commands.CreateProduct;
 using ProductOrderAPI.Application.Products.DTOs;
 using ProductOrderAPI.Application.Products.Queries.GetProductById;
+using ProductOrderAPI.Application.Products.Commands.UpdateProduct;
+using ProductOrderAPI.Application.Products.Commands.DeleteProduct;
 
 namespace ProductOrderAPI.API.Controllers;
 
@@ -29,5 +31,24 @@ public class ProductsController : ControllerBase
     {
         var productDto = await _mediator.Send(new GetProductByIdQuery(id));
         return Ok(productDto);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<ActionResult<ProductDto>> UpdateProduct(Guid id, UpdateProductCommand command)
+    {
+        if (id != command.Id)
+        {
+            return BadRequest();
+        }
+
+        var productDto = await _mediator.Send(command);
+        return Ok(productDto);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> DeleteProduct(Guid id)
+    {
+        await _mediator.Send(new DeleteProductCommand(id));
+        return NoContent();
     }
 }
