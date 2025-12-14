@@ -8,25 +8,25 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
 {
     public void Configure(EntityTypeBuilder<Product> builder)
     {
-        builder.Property(p => p.Name)
+        builder.Property(product => product.Name)
             .HasMaxLength(200)
             .IsRequired();
 
-        builder.Property(p => p.Description)
+        builder.Property(product => product.Description)
             .HasMaxLength(1000);
 
-        builder.OwnsOne(p => p.Price, priceBuilder =>
+        builder.OwnsOne(product => product.Price, priceBuilder =>
         {
-            priceBuilder.Property(p => p.Amount)
+            priceBuilder.Property(price => price.Amount)
                 .HasColumnType("decimal(18,2)")
                 .IsRequired();
 
-            priceBuilder.Property(p => p.Currency)
+            priceBuilder.Property(price => price.Currency)
                 .HasMaxLength(3)
                 .IsRequired();
         });
 
-        builder.Property(p => p.StockQuantity)
+        builder.Property(product => product.StockQuantity)
             .IsRequired();
     }
 }
