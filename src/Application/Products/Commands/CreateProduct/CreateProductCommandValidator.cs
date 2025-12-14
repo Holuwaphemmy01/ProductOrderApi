@@ -7,20 +7,20 @@ public class CreateProductCommandValidator : AbstractValidator<CreateProductComm
 {
     public CreateProductCommandValidator()
     {
-        RuleFor(x => x.Name)
+        RuleFor(command => command.Name)
             .NotEmpty().WithMessage("Name is required.");
 
-        RuleFor(x => x.Description)
+        RuleFor(command => command.Description)
             .NotEmpty().WithMessage("Description is required.");
 
-        RuleFor(x => x.Price.Amount)
+        RuleFor(command => command.Price.Amount)
             .GreaterThan(0).WithMessage("Price amount must be greater than zero.");
 
-        RuleFor(x => x.Price.Currency)
+        RuleFor(command => command.Price.Currency)
             .NotEmpty().WithMessage("Currency is required.")
             .Length(3).WithMessage("Currency must be 3 characters long (e.g., USD).");
 
-        RuleFor(x => x.StockQuantity)
+        RuleFor(command => command.StockQuantity)
             .GreaterThanOrEqualTo(0).WithMessage("Stock quantity cannot be negative.");
     }
 }
