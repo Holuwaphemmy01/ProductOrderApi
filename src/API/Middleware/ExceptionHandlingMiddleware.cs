@@ -42,8 +42,8 @@ public class ExceptionHandlingMiddleware
                 problemDetails.Title = "Validation Error";
                 problemDetails.Detail = "One or more validation errors occurred.";
                 problemDetails.Extensions["errors"] = validationException.Errors
-                    .GroupBy(x => x.PropertyName)
-                    .ToDictionary(x => x.Key, x => x.Select(x => x.ErrorMessage).ToArray());
+                    .GroupBy(error => error.PropertyName)
+                    .ToDictionary(group => group.Key, group => group.Select(error => error.ErrorMessage).ToArray());
                 break;
             case NotFoundException notFoundException:
                 context.Response.StatusCode = (int)HttpStatusCode.NotFound;
